@@ -27,6 +27,13 @@ sudo systemctl enable containerd.service
 sh <(curl -sSf https://downloads.nordcdn.com/apps/linux/install.sh)
 sudo usermod -aG nordvpn $USER
 
+# To install Samba and configure to use with Meshnet for 
+sudo apt update && sudo apt install samba -y
+sudo smbpasswd -a $USER
+sudo usermod -aG sambashare $USER
+sudo apt install nautilus-share -y
+nautilus -q
+
 [SyncThing]
 sudo curl -o /usr/share/keyrings/syncthing-archive-keyring.gpg https://syncthing.net/release-key.gpg
 echo "deb [signed-by=/usr/share/keyrings/syncthing-archive-keyring.gpg] https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list
