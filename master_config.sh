@@ -23,7 +23,7 @@ sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 
 
-[NordVpn]
+# [NordVpn]
 sh <(curl -sSf https://downloads.nordcdn.com/apps/linux/install.sh)
 sudo usermod -aG nordvpn $USER
 
@@ -34,17 +34,22 @@ sudo usermod -aG sambashare $USER
 sudo apt install nautilus-share -y
 nautilus -q
 
-[Linux CIFS]
+# [Linux CIFS]
 sudo apt update && sudo apt install cifs-utils -y
 
 # See NordVPN documentation about accessing a shared mount point
 
-[SyncThing]
+# [SyncThing]
 sudo curl -o /usr/share/keyrings/syncthing-archive-keyring.gpg https://syncthing.net/release-key.gpg
 echo "deb [signed-by=/usr/share/keyrings/syncthing-archive-keyring.gpg] https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list
 sudo systemctl enable syncthing@$USER.service
 sudo systemctl start syncthing@$USER.service
 
-[DevBox]
+# [Vagrant]
+wget -O - https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+sudo apt update && sudo apt install vagrant
+
+# [DevBox]
 curl -fsSL https://get.jetify.com/devbox | bash
 
