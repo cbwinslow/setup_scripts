@@ -53,3 +53,6 @@ sudo apt update && sudo apt install vagrant
 # [DevBox]
 curl -fsSL https://get.jetify.com/devbox | bash
 
+# [Tailscale]
+curl -fsSL https://tailscale.com/install.sh | sh
+sudo apt update
