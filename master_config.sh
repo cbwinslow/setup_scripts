@@ -64,4 +64,64 @@ echo "deb [signed-by=/usr/share/keyrings/windsurf-stable-archive-keyring.gpg arc
 # [ollama]
 curl -fsSL https://ollama.com/install.sh | sh
 
+# [ngrok]
+curl -sSL https://ngrok-agent.s3.amazonaws.com/ngrok.asc \
+  | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null \
+  && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" \
+  | sudo tee /etc/apt/sources.list.d/ngrok.list \
+  && sudo apt update \
+  && sudo apt install ngrok
+
+# [Program List]
+sudo apt install snapd
+sudo snap install snap-store
+
+# [Snap Programs]
+
+sudo snap install code --classic
+sudo snap install pycharm-community --classic
+sudo snap install pycharm-professional --classic
+sudo snap install intellij-idea-community --classic
+sudo snap install intellij-idea-ultimate --classic
+sudo snap install webstorm --classic
+sudo snap install goland --classic
+sudo snap install phpstorm --classic
+sudo snap install rubymine --classic
+sudo snap install clion --classic
+sudo snap install datagrip --classic
+sudo snap install rider --classic
+sudo snap install android-studio --classic
+sudo snap install postman
+sudo snap install slack
+sudo snap install discord
+sudo snap install skype
+sudo snap install zoom-client
+sudo snap install spotify
+sudo snap install vlc
+sudo snap install chromium
+sudo snap install firefox
+sudo snap install opera
+sudo snap install thunderbird
+sudo snap install gimp
+sudo snap install inkscape
+sudo snap install blender
+sudo snap install kdenlive
+sudo snap install obs-studio
+sudo snap install docker
+sudo snap install kubectl --classic
+sudo snap install helm --classic
+sudo snap install microk8s --classic
+sudo snap install lxd
+sudo snap install multipass
+sudo snap install node --classic
+sudo snap install yarn
+sudo snap install dotnet-sdk --classic
+sudo snap install powershell --classic
+sudo snap install terraform
+sudo snap install aws-cli --classic
+
+
+
+
+
 
