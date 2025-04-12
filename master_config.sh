@@ -137,4 +137,6 @@ chmod +x install-opentofu.sh
 # Remove the installer:
 rm -f install-opentofu.sh
 
-
+# [ZeroTier]
+curl -s https://install.zerotier.com | sudo bash
+echo 'you will need to run something like zerotier-cli xxxxxxxxx with your net ID'
