@@ -140,3 +140,8 @@ rm -f install-opentofu.sh
 # [ZeroTier]
 curl -s https://install.zerotier.com | sudo bash
 echo 'you will need to run something like zerotier-cli xxxxxxxxx with your net ID'
+
+# [Code Server]
+curl -fsSL https://code-server.dev/install.sh | sh
+echo 'Code server installed...'
+
