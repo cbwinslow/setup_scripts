@@ -26,3 +26,7 @@ version_control:
 shell:
   - scripts/shell/setup_shell_theme.sh
   - scripts/shell/setup_shell_configs.sh
+tools:
+  - scripts/tools/install_tmux.sh
+  - scripts/tools/setup_tmux_configs.sh
+  - scripts/tools/install_htop.sh
