@@ -1,0 +1,10 @@
+packages:
+  - python
+  - docker
+  - dotfiles
+  - logging
+  - monitoring
+  - databases
+  - ai
+  - version_control
+  - shell

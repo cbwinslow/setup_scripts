@@ -1,0 +1,28 @@
+python:
+  - scripts/python/install_python.sh
+  - scripts/python/install_pyenv.sh
+docker:
+  - scripts/docker/install_docker.sh
+dotfiles:
+  - scripts/dotfiles/setup_dotfiles.sh
+logging:
+  - scripts/logging/install_command_logger.sh
+monitoring:
+  - scripts/monitoring/install_prometheus.sh
+  - scripts/monitoring/install_grafana.sh
+  - scripts/monitoring/install_loki.sh
+  - scripts/monitoring/install_opensearch.sh
+databases:
+  - scripts/databases/install_postgresql.sh
+  - scripts/databases/install_pgvector.sh
+  - scripts/databases/install_clickhouse.sh
+  - scripts/databases/install_supabase.sh
+ai:
+  - scripts/ai/install_ollama.sh
+  - scripts/ai/install_localai.sh
+version_control:
+  - scripts/version_control/install_github_cli.sh
+  - scripts/version_control/install_gitlab_cli.sh
+shell:
+  - scripts/shell/setup_shell_theme.sh
+  - scripts/shell/setup_shell_configs.sh

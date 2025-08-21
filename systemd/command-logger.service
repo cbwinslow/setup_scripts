@@ -1,0 +1,10 @@
+[Unit]
+Description=Command Logger
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/command_logger.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
